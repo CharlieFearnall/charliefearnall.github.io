@@ -1,67 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Production Designer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600&family=Courier+Prime&display=swap" rel="stylesheet">
-</head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Production & Set Design</title>
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Production Designer | Filmmaker | Artist</p>
-    <nav>
-      <a href="#film">Film</a>
-      <a href="#photo">Photography</a>
-      <a href="#art">Artwork</a>
-      <a href="#about">About</a>
-    </nav>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <a href="#hero" class="brand-name">Your Name</a>
+      </div>
+
+      <nav class="nav">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="film">
-    <h2>Film</h2>
-    <div class="gallery">
-      <img src="images/film1.jpg" alt="Film still 1">
-      <img src="images/film2.jpg" alt="Film still 2">
-      <img src="images/film3.jpg" alt="Film still 3">
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="wrap hero-inner">
+        <h1 class="hero-title">Production Designer • Photographer • Artist</h1>
+        <p class="hero-sub">I design worlds for film and craft images with texture and tactility — sets, props & visual storytelling.</p>
+        <a class="cta" href="#work">View Work</a>
+      </div>
+    </section>
+
+    <!-- WORK / GALLERY -->
+    <section id="work" class="work wrap">
+      <h2 class="section-title">Selected Work</h2>
+
+      <!-- Grid of project cards -->
+      <div class="grid" id="projects">
+        <!-- Each card uses a data attribute to hold larger images and description for lightbox -->
+        <article class="card" tabindex="0"
+                 data-title="Project One — Short Film"
+                 data-desc="Production design, set dressing, props, and styling. Shot on location in the Peak District."
+                 data-images='["images/film1.jpg","images/film1-2.jpg"]'
+                 style="background-image: url('images/thumb1.jpg')">
+          <div class="card-overlay">
+            <h3 class="card-title">Project One</h3>
+            <p class="card-sub">Short film — Production Design</p>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0"
+                 data-title="Project Two — Photo Series"
+                 data-desc="A series of analogue photographs exploring texture and landscape."
+                 data-images='["images/photo1.jpg","images/photo1-2.jpg"]'
+                 style="background-image: url('images/thumb2.jpg')">
+          <div class="card-overlay">
+            <h3 class="card-title">Project Two</h3>
+            <p class="card-sub">Photography</p>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0"
+                 data-title="Project Three — Lino Prints"
+                 data-desc="Hand-printed title sequences and lino-cut frames used for title card experiments."
+                 data-images='["images/art1.jpg","images/art1-2.jpg"]'
+                 style="background-image: url('images/thumb3.jpg')">
+          <div class="card-overlay">
+            <h3 class="card-title">Project Three</h3>
+            <p class="card-sub">Artwork</p>
+          </div>
+        </article>
+
+        <!-- Add more cards as needed... -->
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about wrap">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I’m a production designer and artist based in the UK. My practice focuses on tactile materials, practical effects and handcrafted set dressing. I work across short films, photography and printmaking — aiming to create spaces that feel lived-in and narratively rich.</p>
+
+          <p><strong>Credits:</strong> short films, student films, commissioned photography. Available for freelance and collaboration.</p>
+        </div>
+
+        <div class="about-image">
+          <img src="images/about.jpg" alt="Portrait">
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact wrap">
+      <h2 class="section-title">Contact</h2>
+      <p>For commissions, collaboration or screenings: <a href="mailto:you@example.com">you@example.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">@yourhandle</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="year"></span> Your Name — Production Design</small>
     </div>
-  </section>
-
-  <section id="photo">
-    <h2>Photography</h2>
-    <div class="gallery">
-      <img src="images/photo1.jpg" alt="Photo 1">
-      <img src="images/photo2.jpg" alt="Photo 2">
-      <img src="images/photo3.jpg" alt="Photo 3">
-    </div>
-  </section>
-
-  <section id="art">
-    <h2>Artwork</h2>
-    <div class="gallery">
-      <img src="images/art1.jpg" alt="Artwork 1">
-      <img src="images/art2.jpg" alt="Artwork 2">
-      <img src="images/art3.jpg" alt="Artwork 3">
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      I’m a production designer and artist exploring texture, atmosphere, and
-      the relationship between environment and emotion. My work spans short films,
-      photography, and traditional printmaking.
-    </p>
-    <p>📍 Based in the UK<br>
-       ✉️ <a href="mailto:yourname@email.com">yourname@email.com</a><br>
-       📸 <a href="https://www.instagram.com/yourhandle" target="_blank">@yourhandle</a>
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2025 Your Name</p>
   </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <div class="modal-inner">
+      <div class="modal-media" id="modalMedia"></div>
+      <div class="modal-meta">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
