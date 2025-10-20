@@ -1,0 +1,154 @@
+/* ------------------------
+   Font placeholder (add Chelantro later)
+------------------------- */
+@font-face {
+  font-family: 'Chelantro';
+  src: url('fonts/Chelantro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ------------------------
+   Shared Styles
+------------------------- */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; /* Replace with 'Chelantro' later */
+  background: #fcfbf7;
+  overflow-x: hidden;
+  cursor: none; /* hide default cursor */
+}
+
+a { text-decoration: none; color: inherit; }
+
+.site-header {
+  position: fixed;
+  top: 0; left:0; right:0;
+  display:flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  z-index: 100;
+}
+
+.top-left.name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.top-right.nav a {
+  margin-left: 1em;
+  font-size: 0.9em;
+}
+
+/* ------------------------
+   Hero / Fullscreen video
+------------------------- */
+.hero {
+  position: relative;
+  height: 100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow: hidden;
+}
+
+.bg-video {
+  position:absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.falling-title {
+  font-size: 6vw;
+  color: #111;
+  z-index: 10;
+  text-align:center;
+  line-height:1;
+}
+
+/* ------------------------
+   Projects grid
+------------------------- */
+.projects {
+  padding: 6em 2em;
+}
+
+.project-grid {
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 4em;
+}
+
+.project-card {
+  position: relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.project-card img {
+  width: 100%;
+  display:block;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  background: rgba(0,0,0,0.3);
+  color: white;
+  padding: 1em;
+}
+
+/* ------------------------
+   About Page
+------------------------- */
+.about {
+  padding: 8em 2em;
+}
+
+.about-container {
+  display:flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-text { flex:1; }
+.about-text h1 { font-size: 2.5em; margin-bottom:1em; }
+
+.about-image img { width: 100%; max-width:400px; }
+
+/* ------------------------
+   Footer
+------------------------- */
+.site-footer {
+  text-align:center;
+  padding: 2em;
+  font-size:0.9em;
+  color:#666;
+}
+
+/* ------------------------
+   Custom Cursor
+------------------------- */
+.cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 12px; height: 12px;
+  background: black;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  z-index: 200;
+}
