@@ -1,0 +1,94 @@
+/* Handmade-style portfolio by [Your Name] */
+
+body {
+  margin: 0;
+  font-family: 'Spectral', serif;
+  background: #f7f4ef url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  color: #2a2a2a;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 3em 1em 2em;
+  border-bottom: 1px solid #ccc;
+}
+
+h1 {
+  font-family: 'Courier Prime', monospace;
+  font-size: 2.5em;
+  margin: 0.2em 0;
+  letter-spacing: 1px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #333;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+section {
+  padding: 4em 2em;
+  max-width: 900px;
+  margin: auto;
+  border-bottom: 1px dashed #bbb;
+}
+
+section h2 {
+  text-transform: uppercase;
+  font-family: 'Courier Prime', monospace;
+  font-size: 1.4em;
+  border-bottom: 2px solid #333;
+  display: inline-block;
+  margin-bottom: 1.5em;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border: 1px solid #444;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.02);
+}
+
+#about p {
+  max-width: 700px;
+  margin: 1em auto;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 2em;
+  font-size: 0.9em;
+  color: #666;
+}
