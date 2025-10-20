@@ -1,125 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Your Name — Production & Set Design</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charlie Fearnall — Projects</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <div class="brand">
-        <a href="#hero" class="brand-name">Your Name</a>
-      </div>
 
-      <nav class="nav">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <!-- Top header -->
+  <header class="site-header">
+    <div class="top-left name">Charlie Fearnall</div>
+    <div class="top-right nav">
+      <a href="about.html">who am I?</a>
+      <a href="#projects">what am I doing here?</a>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section id="hero" class="hero">
-      <div class="wrap hero-inner">
-        <h1 class="hero-title">Production Designer • Photographer • Artist</h1>
-        <p class="hero-sub">I design worlds for film and craft images with texture and tactility — sets, props & visual storytelling.</p>
-        <a class="cta" href="#work">View Work</a>
-      </div>
-    </section>
+  <!-- Full-screen video background -->
+  <section class="hero">
+    <!-- Replace the iframe src with your own video later -->
+    <iframe src="https://www.youtube.com/embed/9iMBmEgW47I?autoplay=1&mute=1&loop=1&playlist=9iMBmEgW47I"
+      frameborder="0" allow="autoplay; fullscreen" class="bg-video"></iframe>
+    <h1 class="falling-title">PROJECTS</h1>
+  </section>
 
-    <!-- WORK / GALLERY -->
-    <section id="work" class="work wrap">
-      <h2 class="section-title">Selected Work</h2>
+  <!-- Projects grid -->
+  <section id="projects" class="projects">
+    <div class="project-grid">
 
-      <!-- Grid of project cards -->
-      <div class="grid" id="projects">
-        <!-- Each card uses a data attribute to hold larger images and description for lightbox -->
-        <article class="card" tabindex="0"
-                 data-title="Project One — Short Film"
-                 data-desc="Production design, set dressing, props, and styling. Shot on location in the Peak District."
-                 data-images='["images/film1.jpg","images/film1-2.jpg"]'
-                 style="background-image: url('images/thumb1.jpg')">
-          <div class="card-overlay">
-            <h3 class="card-title">Project One</h3>
-            <p class="card-sub">Short film — Production Design</p>
-          </div>
-        </article>
-
-        <article class="card" tabindex="0"
-                 data-title="Project Two — Photo Series"
-                 data-desc="A series of analogue photographs exploring texture and landscape."
-                 data-images='["images/photo1.jpg","images/photo1-2.jpg"]'
-                 style="background-image: url('images/thumb2.jpg')">
-          <div class="card-overlay">
-            <h3 class="card-title">Project Two</h3>
-            <p class="card-sub">Photography</p>
-          </div>
-        </article>
-
-        <article class="card" tabindex="0"
-                 data-title="Project Three — Lino Prints"
-                 data-desc="Hand-printed title sequences and lino-cut frames used for title card experiments."
-                 data-images='["images/art1.jpg","images/art1-2.jpg"]'
-                 style="background-image: url('images/thumb3.jpg')">
-          <div class="card-overlay">
-            <h3 class="card-title">Project Three</h3>
-            <p class="card-sub">Artwork</p>
-          </div>
-        </article>
-
-        <!-- Add more cards as needed... -->
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="about wrap">
-      <h2 class="section-title">About</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I’m a production designer and artist based in the UK. My practice focuses on tactile materials, practical effects and handcrafted set dressing. I work across short films, photography and printmaking — aiming to create spaces that feel lived-in and narratively rich.</p>
-
-          <p><strong>Credits:</strong> short films, student films, commissioned photography. Available for freelance and collaboration.</p>
+      <!-- Example project card -->
+      <div class="project-card" tabindex="0">
+        <div class="project-overlay">
+          <h2>BIRDSONG</h2>
+          <p>Short film — Production Design</p>
         </div>
-
-        <div class="about-image">
-          <img src="images/about.jpg" alt="Portrait">
-        </div>
+        <img src="images/thumb1.jpg" alt="Birdsong Thumbnail">
+        <!-- Replace src with your actual images later -->
       </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact wrap">
-      <h2 class="section-title">Contact</h2>
-      <p>For commissions, collaboration or screenings: <a href="mailto:you@example.com">you@example.com</a></p>
-      <p>Instagram: <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">@yourhandle</a></p>
-    </section>
-  </main>
+      <!-- Add more project cards below as needed -->
+      <div class="project-card" tabindex="0">
+        <div class="project-overlay">
+          <h2>PROJECT 2</h2>
+          <p>Photography / Artwork</p>
+        </div>
+        <img src="images/thumb2.jpg" alt="Project 2 Thumbnail">
+      </div>
+
+    </div>
+  </section>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <small>© <span id="year"></span> Your Name — Production Design</small>
-    </div>
+    <small>© 2025 Charlie Fearnall</small>
   </footer>
 
-  <!-- LIGHTBOX MODAL -->
-  <div id="modal" class="modal" aria-hidden="true">
-    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-    <div class="modal-inner">
-      <div class="modal-media" id="modalMedia"></div>
-      <div class="modal-meta">
-        <h3 id="modalTitle"></h3>
-        <p id="modalDesc"></p>
-      </div>
-    </div>
-  </div>
+  <!-- Custom cursor -->
+  <div class="cursor"></div>
 
   <script src="script.js"></script>
 </body>
