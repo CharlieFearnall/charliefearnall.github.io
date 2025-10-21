@@ -6,7 +6,7 @@
     font-family: 'Chelantro';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/Chelantro.ttf') format('woff');
+    src: url('./fonts/Chelantro.ttf') format('truetype');
 }
 
 @font-face {
@@ -35,7 +35,7 @@
     --line-height-small: 1.2;
 
     --black: #000;
-    --pink: #ff3258;
+    --pink: #216d85;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
 
@@ -201,7 +201,7 @@ a {
 
 button:focus,
 a:focus {
-    outline: 2px solid var(--green);
+    outline: 2px solid var(--pink);
 }
 
 body:not(.user-is-tabbing) button:focus,
@@ -210,7 +210,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .link:hover {
-    color: var(--green);
+    color: var(--pink);
 }
 
 .btn {
