@@ -3,10 +3,10 @@
 /* --------------------------------------- */
 
 @font-face {
-    font-family: 'Hk Grotesk';
+    font-family: 'Chelantro';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/HKGrotesk-Regular.woff') format('woff');
+    src: url('./fonts/Chelantro.ttf') format('truetype');
 }
 
 @font-face {
@@ -35,7 +35,7 @@
     --line-height-small: 1.2;
 
     --black: #000;
-    --pink: #ff3258;
+    --pink: #216d85;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
 
@@ -122,7 +122,7 @@ img {
 h1,
 h2,
 h3 {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Chelantro', sans-serif;
     font-weight: 400;
     line-height: var(--line-height-small);
     color: var(--white);
@@ -422,7 +422,7 @@ body:not(.user-is-tabbing) a:focus {
 .header__text p {
     margin: 1.5rem 0 3.5rem;
     max-width: var(--container-medium-width);
-    font-family: 'Jost', sans-serif;
+    font-family: 'Chelantro', sans-serif;
     font-size: var(--font-size-medium);
 }
 
