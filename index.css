@@ -611,3 +611,10 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 }
+
+.work__links {
+  display: flex;
+  gap: 1rem; /* space between links */
+  flex-wrap: wrap; /* ensures they don't overflow on small screens */
+  align-items: center;
+}
