@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
   <title>Art Work - Charlie Fearnall</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 
-  <!-- Header with centered title -->
-  <header class="header-art">
-    <nav class="nav">
-      <ul class="nav__items">
-        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-        <li class="nav__item"><a href="set-work.html" class="nav__link">Set Work</a></li>
-        <li class="nav__item"><a href="art-work.html" class="nav__link">Art Work</a></li>
-      </ul>
-    </nav>
-    <div class="header-title">
-      <h1>Art Work</h1>
+  <!-- ***** Header ***** -->
+  <header class="header-art" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="set-work.html" class="nav__link">Set Work</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text center-title">
+        <h1 class="heading-primary">Art Work</h1>
+      </div>
     </div>
   </header>
 
-  <!-- Portfolio Grid -->
-  <main>
-    <section class="portfolio-section">
-      <div class="portfolio-grid">
-        <!-- Large image -->
-        <div class="portfolio-item large">
-          <img src="images/art1.jpg" alt="Art Work 1">
-        </div>
-        <!-- Two small images side by side -->
-        <div class="portfolio-item small">
-          <img src="images/art2.jpg" alt="Art Work 2">
-        </div>
-        <div class="portfolio-item small">
-          <img src="images/art3.jpg" alt="Art Work 3">
-        </div>
-        <!-- Another large image -->
-        <div class="portfolio-item large">
-          <img src="images/art4.jpg" alt="Art Work 4">
+  <!-- ***** Portfolio Images ***** -->
+  <main role="main">
+    <section class="work" id="work">
+      <div class="row">
+        <div class="work__boxes">
+          <div class="work__box">
+            <div class="work__image-box">
+              <img src="./images/art1.jpg" class="work__image" alt="Art Work 1" />
+            </div>
+          </div>
+          <div class="work__box">
+            <div class="work__image-box">
+              <img src="./images/art2.jpg" class="work__image" alt="Art Work 2" />
+            </div>
+          </div>
+          <div class="work__box">
+            <div class="work__image-box">
+              <img src="./images/art3.jpg" class="work__image" alt="Art Work 3" />
+            </div>
+          </div>
+          <div class="work__box">
+            <div class="work__image-box">
+              <img src="./images/art4.jpg" class="work__image" alt="Art Work 4" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -47,6 +58,3 @@
 
 </body>
 </html>
-
-
-
