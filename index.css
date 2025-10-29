@@ -612,7 +612,7 @@ body:not(.user-is-tabbing) a:focus {
     } 
 
 /* --------------------------------------- */
-/* ----- Art & Set Pages ----- */
+/* ----- art and set pages ----- */
 /* --------------------------------------- */
 
 /* ---------- Fullscreen Headers ---------- */
@@ -620,133 +620,148 @@ body:not(.user-is-tabbing) a:focus {
 .header-set {
   position: relative;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-size: cover;
   background-position: center;
-  color: white;
-  padding: 2rem 4rem;
-  box-sizing: border-box;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 0 4rem; /* keeps everything away from edges */
 }
 
+/* Backgrounds */
 .header-art {
-  background-image: url('./images/art-bg.jpg');
+  background-image: url('./images/art-bg.jpg'); /* change if needed */
 }
 
 .header-set {
-  background-image: url('./images/set-bg.jpg');
+  background-image: url('./images/set-bg.jpg'); /* change if needed */
 }
 
-/* ---------- Navigation ---------- */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav__items {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav__link {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-}
-
-.nav__link:hover {
-  color: #ff6b6b;
-}
-
-/* ---------- Page Title ---------- */
+/* Center the title properly */
 .center-title {
+  position: absolute;
+  top: 50%;
+  left: 51%; /* nudge slightly right, try 50% for exact center */
+  transform: translate(-50%, -50%);
   text-align: center;
-  margin-top: 30vh;
+  width: 100%;
 }
 
 .center-title h1 {
-  font-size: 5rem;
+  font-size: 6rem;
   color: white;
   letter-spacing: 2px;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+
+/* Navigation / back links */
+.page-nav {
+  position: absolute;
+  top: 2rem;
+  right: 4rem; /* bring in from edge */
+  display: flex;
+  gap: 1.5rem;
+}
+
+.page-nav a {
+  color: white;
+  font-size: 1.4rem;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.page-nav a:hover {
+  border-color: white;
 }
 
 /* ---------- Gallery Section ---------- */
 .art-gallery,
 .set-gallery {
-  padding: 6rem 3rem;
+  padding: 6rem 4rem;
   background-color: #111;
 }
 
-/* Grid layout for images */
+/* Adjusted gallery grid */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2.5rem;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
-/* Image container */
+/* Image styling */
 .gallery-item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Large and small image sizes */
 .gallery-item.large img {
-  width: 80%;
+  width: 85%;
   height: auto;
   border-radius: 10px;
   border: 2px solid #fff;
-  display: block;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .gallery-item.small img {
-  width: 90%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
   border: 2px solid #fff;
-  display: block;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
-/* Hover motion */
+/* Hover effect */
 .gallery-item img:hover {
   transform: scale(1.03);
   transition: transform 0.4s ease;
 }
 
-/* ---------- Footer ---------- */
-.footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: #000;
-  color: #fff;
-  font-size: 0.9rem;
-}
-
 /* ---------- Responsive Tweaks ---------- */
 @media (max-width: 1024px) {
   .center-title h1 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
   }
 
-  .gallery-item.large img {
-    width: 90%;
+  .header-art,
+  .header-set {
+    padding: 0 2rem;
+  }
+
+  .page-nav {
+    right: 2rem;
   }
 }
 
 @media (max-width: 768px) {
+  .center-title {
+    left: 50%;
+  }
+
+  .center-title h1 {
+    font-size: 3.5rem;
+  }
+
+  .art-gallery,
+  .set-gallery {
+    padding: 4rem 2rem;
+  }
+
   .gallery-grid {
     grid-template-columns: 1fr;
   }
 
   .gallery-item.large img {
     width: 95%;
+  }
+
+  .page-nav {
+    right: 1.5rem;
+    top: 1.5rem;
   }
 }
