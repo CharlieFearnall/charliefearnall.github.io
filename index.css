@@ -611,6 +611,12 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 
+    /* --------------------------------------- */
+/* ----- art and set pages ----- */
+/* --------------------------------------- */
+/* ------------------------------
+   Fullscreen background video
+------------------------------- */
 .header-video {
   position: absolute;
   top: 0;
@@ -621,10 +627,66 @@ body:not(.user-is-tabbing) a:focus {
   z-index: -1;
 }
 
+/* ------------------------------
+   Header Text Centering
+------------------------------- */
 .header__text-box {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  padding-top: 30vh;
+  z-index: 1;
   color: var(--white);
 }
+
+/* Falling letters animation */
+.falling-letters span {
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+/* ------------------------------
+   Portfolio Grid
+------------------------------- */
+.portfolio-section {
+  padding: 4rem 2rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border: 2px solid var(--white-1);
+}
+
+/* ------------------------------
+   Custom Cursor
+------------------------------- */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--pink);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* ------------------------------
+   Page Specific Backgrounds
+------------------------------- */
+.art-header { }
+.set-header { }
+
+/* Add any page-specific overlays, if needed */
