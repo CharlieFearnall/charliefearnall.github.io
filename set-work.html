@@ -8,8 +8,8 @@
 </head>
 <body>
 
-  <!-- ***** Header ***** -->
-  <header class="header set-header">
+  <!-- Header with centered title -->
+  <header class="header-set">
     <nav class="nav">
       <ul class="nav__items">
         <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
@@ -17,42 +17,33 @@
         <li class="nav__item"><a href="art-work.html" class="nav__link">Art Work</a></li>
       </ul>
     </nav>
-
-    <!-- Fullscreen background -->
-    <video autoplay muted loop playsinline class="header-video">
-      <source src="images/set-work.mp4" type="video/mp4">
-      <img src="images/set-work.jpg" alt="Set Work Background">
-    </video>
-
-    <div class="header__text-box">
-      <h1 class="heading-primary"><span class="falling-letters">Set Work</span></h1>
+    <div class="header-title">
+      <h1>Set Work</h1>
     </div>
   </header>
 
-  <!-- ***** Main Content ***** -->
+  <!-- Portfolio Grid -->
   <main>
     <section class="portfolio-section">
       <div class="portfolio-grid">
-        <div class="portfolio-item full">
+        <div class="portfolio-item large">
           <img src="images/set1.jpg" alt="Set Work 1">
         </div>
-        <div class="portfolio-item">
+        <div class="portfolio-item small">
           <img src="images/set2.jpg" alt="Set Work 2">
         </div>
-        <div class="portfolio-item">
+        <div class="portfolio-item small">
           <img src="images/set3.jpg" alt="Set Work 3">
         </div>
-        <div class="portfolio-item full">
+        <div class="portfolio-item large">
           <img src="images/set4.jpg" alt="Set Work 4">
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Custom cursor -->
-  <div id="custom-cursor"></div>
-  <script src="index.js"></script>
 </body>
 </html>
+
 
 
