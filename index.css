@@ -612,10 +612,10 @@ body:not(.user-is-tabbing) a:focus {
     } 
 
 /* --------------------------------------- */
-/* ----- art and set pages ----- */
+/* ----- Art & Set Pages CSS ----- */
 /* --------------------------------------- */
 
-/* ---------- Fullscreen Headers ---------- */
+/* ---------- Fullscreen Header ---------- */
 .header-art,
 .header-set {
   position: relative;
@@ -627,23 +627,23 @@ body:not(.user-is-tabbing) a:focus {
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-  padding: 0 4rem;
+  padding: 0 4rem; /* horizontal padding for desktop */
 }
 
-/* Backgrounds */
+/* Background images */
 .header-art {
-  background-image: url('./images/art-bg.jpg');
+  background-image: url('./images/art-bg.jpg'); /* Replace with your background */
 }
 
 .header-set {
-  background-image: url('./images/set-bg.jpg');
+  background-image: url('./images/set-bg.jpg'); /* Replace with your background */
 }
 
-/* ---------- Center Title ---------- */
+/* ---------- Centered Title ---------- */
 .center-title {
   position: absolute;
-  top: 50%;
-  left: 50%; /* perfectly centers horizontally */
+  top: 50%;  /* vertically center */
+  left: 50%; /* horizontally center */
   transform: translate(-50%, -50%);
   text-align: center;
   width: 100%;
@@ -657,7 +657,19 @@ body:not(.user-is-tabbing) a:focus {
   margin: 0;
 }
 
-/* ---------- Page Nav (Back Links) ---------- */
+@media (max-width: 1024px) {
+  .center-title h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .center-title h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* ---------- Page Navigation / Back Links ---------- */
 .page-nav {
   position: absolute;
   top: 2rem;
@@ -679,6 +691,19 @@ body:not(.user-is-tabbing) a:focus {
   border-color: white;
 }
 
+@media (max-width: 1024px) {
+  .page-nav {
+    right: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-nav {
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+}
+
 /* ---------- Gallery Section ---------- */
 .art-gallery,
 .set-gallery {
@@ -686,7 +711,7 @@ body:not(.user-is-tabbing) a:focus {
   background-color: #111;
 }
 
-/* Adjusted gallery grid */
+/* Grid for images */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -695,7 +720,7 @@ body:not(.user-is-tabbing) a:focus {
   margin: 0 auto;
 }
 
-/* Image styling */
+/* Individual gallery items */
 .gallery-item {
   display: flex;
   justify-content: center;
@@ -703,7 +728,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .gallery-item.large img {
-  width: 85%;
+  width: 85%; /* smaller than full screen */
   height: auto;
   border-radius: 10px;
   border: 2px solid #fff;
@@ -724,27 +749,15 @@ body:not(.user-is-tabbing) a:focus {
   transition: transform 0.4s ease;
 }
 
-/* ---------- Responsive Tweaks ---------- */
+/* Responsive tweaks */
 @media (max-width: 1024px) {
-  .center-title h1 {
-    font-size: 4.5rem;
-  }
-
   .header-art,
   .header-set {
     padding: 0 2rem;
   }
-
-  .page-nav {
-    right: 2rem;
-  }
 }
 
 @media (max-width: 768px) {
-  .center-title h1 {
-    font-size: 3.5rem;
-  }
-
   .art-gallery,
   .set-gallery {
     padding: 4rem 2rem;
@@ -757,9 +770,5 @@ body:not(.user-is-tabbing) a:focus {
   .gallery-item.large img {
     width: 95%;
   }
-
-  .page-nav {
-    right: 1.5rem;
-    top: 1.5rem;
-  }
 }
+
