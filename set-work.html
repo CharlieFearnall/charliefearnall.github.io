@@ -9,9 +9,9 @@
 <body>
 
   <!-- ***** Header ***** -->
-  <header class="header" role="banner">
+  <header class="header set-header">
     <div class="row">
-      <nav class="nav" role="navigation">
+      <nav class="nav">
         <ul class="nav__items">
           <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
           <li class="nav__item"><a href="set-work.html" class="nav__link">Set Work</a></li>
@@ -22,38 +22,54 @@
 
     <!-- Fullscreen background -->
     <video autoplay muted loop playsinline class="header-video">
-      <source src="video/hero.mp4" type="video/mp4">
-      <!-- fallback image -->
-      <img src="images/header.jpg" alt="Background">
+      <source src="video/set-work.mp4" type="video/mp4">
+      <img src="images/set-work.jpg" alt="Set Work Background">
     </video>
 
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">Set Work</h1>
-      </div>
+    <div class="header__text-box">
+      <h1 class="heading-primary"><span class="falling-letters">Set Work</span></h1>
     </div>
   </header>
 
   <!-- ***** Main Content ***** -->
-  <main role="main">
+  <main>
     <section class="portfolio-section">
       <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <img src="photos/screen1.jpg" alt="Set Work 1">
-        </div>
-        <div class="portfolio-item">
-          <img src="photos/screen2.jpg" alt="Set Work 2">
-        </div>
-        <div class="portfolio-item">
-          <img src="photos/screen3.jpg" alt="Set Work 3">
-        </div>
-        <div class="portfolio-item">
-          <img src="photos/screen4.jpg" alt="Set Work 4">
-        </div>
+        <div class="portfolio-item"><img src="photos/set1.jpg" alt="Set Work 1"></div>
+        <div class="portfolio-item"><img src="photos/set2.jpg" alt="Set Work 2"></div>
+        <div class="portfolio-item"><img src="photos/set3.jpg" alt="Set Work 3"></div>
+        <div class="portfolio-item"><img src="photos/set4.jpg" alt="Set Work 4"></div>
       </div>
     </section>
   </main>
 
+  <!-- Custom cursor -->
+  <div id="custom-cursor"></div>
+
   <script src="index.js"></script>
+  <script>
+    const letters = document.querySelectorAll('.falling-letters');
+    letters.forEach(el => {
+      const text = el.textContent;
+      el.textContent = '';
+      text.split('').forEach((char, i) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.display = 'inline-block';
+        span.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+        el.appendChild(span);
+        setTimeout(() => {
+          span.style.transform = 'translateY(0)';
+          span.style.opacity = '1';
+        }, i * 50);
+      });
+    });
+
+    const cursor = document.getElementById('custom-cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+  </script>
 </body>
 </html>
