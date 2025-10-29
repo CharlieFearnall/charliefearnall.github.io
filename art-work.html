@@ -8,83 +8,45 @@
 </head>
 <body>
 
-  <!-- ***** Header ***** -->
-  <header class="header art-header">
-    <div class="row">
-      <nav class="nav">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="set-work.html" class="nav__link">Set Work</a></li>
-          <li class="nav__item"><a href="art-work.html" class="nav__link">Art Work</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <!-- Fullscreen background -->
-    <video autoplay muted loop playsinline class="header-video">
-      <source src="video/art-work.mp4" type="video/mp4">
-      <img src="images/art-work.jpg" alt="Art Work Background">
-    </video>
-
-    <div class="header__text-box">
-      <h1 class="heading-primary"><span class="falling-letters">Art Work</span></h1>
+  <!-- Header with centered title -->
+  <header class="header-art">
+    <nav class="nav">
+      <ul class="nav__items">
+        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="set-work.html" class="nav__link">Set Work</a></li>
+        <li class="nav__item"><a href="art-work.html" class="nav__link">Art Work</a></li>
+      </ul>
+    </nav>
+    <div class="header-title">
+      <h1>Art Work</h1>
     </div>
   </header>
 
-  <!-- ***** Main Content ***** -->
+  <!-- Portfolio Grid -->
   <main>
     <section class="portfolio-section">
       <div class="portfolio-grid">
-        <!-- Single large image -->
-        <div class="portfolio-item full">
+        <!-- Large image -->
+        <div class="portfolio-item large">
           <img src="images/art1.jpg" alt="Art Work 1">
         </div>
-
-        <!-- Two images side by side -->
-        <div class="portfolio-item">
+        <!-- Two small images side by side -->
+        <div class="portfolio-item small">
           <img src="images/art2.jpg" alt="Art Work 2">
         </div>
-        <div class="portfolio-item">
+        <div class="portfolio-item small">
           <img src="images/art3.jpg" alt="Art Work 3">
         </div>
-
-        <!-- Another single large image -->
-        <div class="portfolio-item full">
+        <!-- Another large image -->
+        <div class="portfolio-item large">
           <img src="images/art4.jpg" alt="Art Work 4">
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Custom cursor -->
-  <div id="custom-cursor"></div>
-
-  <script src="index.js"></script>
-  <script>
-    const letters = document.querySelectorAll('.falling-letters');
-    letters.forEach(el => {
-      const text = el.textContent;
-      el.textContent = '';
-      text.split('').forEach((char, i) => {
-        const span = document.createElement('span');
-        span.textContent = char;
-        span.style.display = 'inline-block';
-        span.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
-        el.appendChild(span);
-        setTimeout(() => {
-          span.style.transform = 'translateY(0)';
-          span.style.opacity = '1';
-        }, i * 50);
-      });
-    });
-
-    const cursor = document.getElementById('custom-cursor');
-    document.addEventListener('mousemove', e => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    });
-  </script>
 </body>
 </html>
+
 
 
