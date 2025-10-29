@@ -685,53 +685,74 @@ body:not(.user-is-tabbing) a:focus {
 .center-title h1 {
   font-size: 6rem;
   color: white;
+  letter-spacing: 2px;
 }
 
-/* Gallery Grid Layout */
+/* Gallery Section */
 .art-gallery {
   padding: 5rem 2rem;
-  background-color: #111; /* slightly darker backdrop */
+  background-color: #111;
 }
 
+/* Adjusted gallery grid */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  max-width: 1600px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
-/* Image Sizing */
-.gallery-item.large img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  border: 2px solid white;
-  display: block;
+/* Image styling */
+.gallery-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Make large images smaller — about 85% of container width */
+.gallery-item.large img {
+  width: 85%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Small paired images stay slightly smaller for variety */
 .gallery-item.small img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  border: 2px solid white;
+  border-radius: 10px;
+  border: 2px solid #fff;
   display: block;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
-/* Slight hover effect */
+/* Hover motion */
 .gallery-item img:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
+  transform: scale(1.03);
+  transition: transform 0.4s ease;
 }
 
 /* Responsive tweaks */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .center-title h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
-  .gallery-grid {
-    grid-template-columns: 1fr;
+  .gallery-item.large img {
+    width: 90%;
   }
 }
 
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item.large img {
+    width: 95%;
+  }
+}
