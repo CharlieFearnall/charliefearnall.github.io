@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Work - Charlie Fearnall</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- ***** Header ***** -->
+  <header class="header art-header">
+    <div class="row">
+      <nav class="nav">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="set-work.html" class="nav__link">Set Work</a></li>
+          <li class="nav__item"><a href="art-work.html" class="nav__link">Art Work</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Fullscreen background -->
+    <video autoplay muted loop playsinline class="header-video">
+      <source src="video/art-work.mp4" type="video/mp4">
+      <img src="images/art-work.jpg" alt="Art Work Background">
+    </video>
+
+    <div class="header__text-box">
+      <h1 class="heading-primary"><span class="falling-letters">Art Work</span></h1>
+    </div>
+  </header>
+
+  <!-- ***** Main Content ***** -->
+  <main>
+    <section class="portfolio-section">
+      <div class="portfolio-grid">
+        <div class="portfolio-item"><img src="images/art1.jpg" alt="Art Work 1"></div>
+        <div class="portfolio-item"><img src="images/art2.jpg" alt="Art Work 2"></div>
+        <div class="portfolio-item"><img src="images/art3.jpg" alt="Art Work 3"></div>
+        <div class="portfolio-item"><img src="images/art4.jpg" alt="Art Work 4"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Custom cursor -->
+  <div id="custom-cursor"></div>
+
+  <script src="index.js"></script>
+  <script>
+    const letters = document.querySelectorAll('.falling-letters');
+    letters.forEach(el => {
+      const text = el.textContent;
+      el.textContent = '';
+      text.split('').forEach((char, i) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.display = 'inline-block';
+        span.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+        el.appendChild(span);
+        setTimeout(() => {
+          span.style.transform = 'translateY(0)';
+          span.style.opacity = '1';
+        }, i * 50);
+      });
+    });
+
+    const cursor = document.getElementById('custom-cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+  </script>
+</body>
+</html>
+
