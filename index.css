@@ -627,26 +627,27 @@ body:not(.user-is-tabbing) a:focus {
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-  padding: 0 4rem; /* keeps everything away from edges */
+  padding: 0 4rem;
 }
 
 /* Backgrounds */
 .header-art {
-  background-image: url('./images/art-bg.jpg'); /* change if needed */
+  background-image: url('./images/art-bg.jpg');
 }
 
 .header-set {
-  background-image: url('./images/set-bg.jpg'); /* change if needed */
+  background-image: url('./images/set-bg.jpg');
 }
 
-/* Center the title properly */
+/* ---------- Center Title ---------- */
 .center-title {
   position: absolute;
   top: 50%;
-  left: 51%; /* nudge slightly right, try 50% for exact center */
+  left: 50%; /* perfectly centers horizontally */
   transform: translate(-50%, -50%);
   text-align: center;
   width: 100%;
+  pointer-events: none;
 }
 
 .center-title h1 {
@@ -656,13 +657,14 @@ body:not(.user-is-tabbing) a:focus {
   margin: 0;
 }
 
-/* Navigation / back links */
+/* ---------- Page Nav (Back Links) ---------- */
 .page-nav {
   position: absolute;
   top: 2rem;
-  right: 4rem; /* bring in from edge */
+  right: 3rem;
   display: flex;
   gap: 1.5rem;
+  z-index: 10;
 }
 
 .page-nav a {
@@ -680,7 +682,7 @@ body:not(.user-is-tabbing) a:focus {
 /* ---------- Gallery Section ---------- */
 .art-gallery,
 .set-gallery {
-  padding: 6rem 4rem;
+  padding: 6rem 5rem;
   background-color: #111;
 }
 
@@ -739,10 +741,6 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 @media (max-width: 768px) {
-  .center-title {
-    left: 50%;
-  }
-
   .center-title h1 {
     font-size: 3.5rem;
   }
