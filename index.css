@@ -614,41 +614,7 @@ body:not(.user-is-tabbing) a:focus {
     /* --------------------------------------- */
 /* ----- art and set pages ----- */
 /* --------------------------------------- */
-:root {
-  --white: #fff;
-  --black: #000;
-  --gap: 2rem;
-}
-
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: var(--black);
-  color: var(--white);
-}
-
-/* ----- Navigation ----- */
-.nav {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-}
-
-.nav__items {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav__link {
-  text-decoration: none;
-  color: var(--white);
-  font-weight: bold;
-}
-
-/* ----- Header ----- */
+/* ---------- Fullscreen Headers ---------- */
 .header-art,
 .header-set {
   position: relative;
@@ -656,49 +622,44 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   background-size: cover;
   background-position: center;
-  background-color: #111; /* fallback */
 }
 
 .header-art {
-  background-image: url('images/art-work.jpg'); /* placeholder */
+  background-image: url('./images/art-bg.jpg'); /* Replace with your background */
 }
 
 .header-set {
-  background-image: url('images/set-work.jpg'); /* placeholder */
+  background-image: url('./images/set-bg.jpg'); /* Replace with your background */
 }
 
-.header-title h1 {
-  font-size: 5rem;
-  margin: 0;
+/* Center the title */
+.center-title {
+  text-align: center;
 }
 
-/* ----- Portfolio Grid ----- */
-.portfolio-section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+.center-title h1 {
+  font-size: 6rem;
+  color: white;
 }
 
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--gap);
+/* ---------- Portfolio Grid ---------- */
+.work__boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 4rem;
+  justify-content: center;
 }
 
-.portfolio-item img {
+.work__box {
+  flex: 0 1 calc(45% - 2rem); /* roughly half width */
+}
+
+.work__box img {
   width: 100%;
+  height: auto;
   display: block;
-  object-fit: cover;
-  border: 2px solid #fff;
-}
-
-.portfolio-item.large {
-  grid-column: 1 / -1; /* Full width */
-}
-
-.portfolio-item.small {
-  grid-column: auto; /* normal column */
+  border: 2px solid white;
 }
