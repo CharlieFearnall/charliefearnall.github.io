@@ -1,97 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-  <title>Art Work - Charlie Fearnall</title>
+  <title>Art Work | Charlie Fearnall</title>
   <link rel="stylesheet" href="index.css" />
 </head>
+
 <body>
 
   <!-- ***** Header ***** -->
   <header class="header-art" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="set-work.html" class="nav__link">Set Work</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header__text-box row">
-      <div class="header__text center-title">
-        <h1 class="heading-primary">Art Work</h1>
-      </div>
+    <nav class="nav" role="navigation">
+      <ul class="nav__items">
+        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="set-work.html" class="nav__link">Set Work</a></li>
+        <li class="nav__item"><a href="#gallery" class="nav__link">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__title">
+      <h1>Art Work</h1>
     </div>
   </header>
 
-  <!-- ***** Artwork Grid ***** -->
-  <main role="main">
-    <section class="art-gallery">
-      <div class="gallery-grid">
+  <!-- ***** Gallery ***** -->
+  <section class="art-gallery" id="gallery">
+    <div class="gallery-grid">
+      <!-- Large images -->
+      <div class="gallery-item large"><img src="./images/art1.jpg" alt="Art 1"></div>
+      <div class="gallery-item large"><img src="./images/art2.jpg" alt="Art 2"></div>
 
-        <!-- Large Single Images -->
-        <div class="gallery-item large">
-          <img src="./images/art1.jpg" alt="Art Work 1">
-        </div>
+      <!-- Small paired images -->
+      <div class="gallery-item small"><img src="./images/art3.jpg" alt="Art 3"></div>
+      <div class="gallery-item small"><img src="./images/art4.jpg" alt="Art 4"></div>
 
-        <div class="gallery-item large">
-          <img src="./images/art2.jpg" alt="Art Work 2">
-        </div>
+      <!-- Continue up to 15 -->
+      <div class="gallery-item large"><img src="./images/art5.jpg" alt="Art 5"></div>
+      <div class="gallery-item small"><img src="./images/art6.jpg" alt="Art 6"></div>
+      <div class="gallery-item small"><img src="./images/art7.jpg" alt="Art 7"></div>
+      <div class="gallery-item large"><img src="./images/art8.jpg" alt="Art 8"></div>
+      <div class="gallery-item large"><img src="./images/art9.jpg" alt="Art 9"></div>
+      <div class="gallery-item small"><img src="./images/art10.jpg" alt="Art 10"></div>
+      <div class="gallery-item small"><img src="./images/art11.jpg" alt="Art 11"></div>
+      <div class="gallery-item large"><img src="./images/art12.jpg" alt="Art 12"></div>
+      <div class="gallery-item large"><img src="./images/art13.jpg" alt="Art 13"></div>
+      <div class="gallery-item small"><img src="./images/art14.jpg" alt="Art 14"></div>
+      <div class="gallery-item small"><img src="./images/art15.jpg" alt="Art 15"></div>
+    </div>
+  </section>
 
-        <!-- Two Smaller Images Side-by-Side -->
-        <div class="gallery-item small">
-          <img src="./images/art3.jpg" alt="Art Work 3">
-        </div>
-        <div class="gallery-item small">
-          <img src="./images/art4.jpg" alt="Art Work 4">
-        </div>
-
-        <div class="gallery-item large">
-          <img src="./images/art5.jpg" alt="Art Work 5">
-        </div>
-
-        <div class="gallery-item small">
-          <img src="./images/art6.jpg" alt="Art Work 6">
-        </div>
-        <div class="gallery-item small">
-          <img src="./images/art7.jpg" alt="Art Work 7">
-        </div>
-
-        <div class="gallery-item large">
-          <img src="./images/art8.jpg" alt="Art Work 8">
-        </div>
-
-        <div class="gallery-item small">
-          <img src="./images/art9.jpg" alt="Art Work 9">
-        </div>
-        <div class="gallery-item small">
-          <img src="./images/art10.jpg" alt="Art Work 10">
-        </div>
-
-        <div class="gallery-item large">
-          <img src="./images/art11.jpg" alt="Art Work 11">
-        </div>
-
-        <div class="gallery-item small">
-          <img src="./images/art12.jpg" alt="Art Work 12">
-        </div>
-        <div class="gallery-item small">
-          <img src="./images/art13.jpg" alt="Art Work 13">
-        </div>
-
-        <div class="gallery-item large">
-          <img src="./images/art14.jpg" alt="Art Work 14">
-        </div>
-
-        <div class="gallery-item large">
-          <img src="./images/art15.jpg" alt="Art Work 15">
-        </div>
-
-      </div>
-    </section>
-  </main>
-
+  <footer role="contentinfo" class="footer">
+    <p>Charlie Fearnall - 2025.</p>
+  </footer>
 </body>
 </html>
