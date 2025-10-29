@@ -1,4 +1,4 @@
-/* --------------------------------------- */
+ /* --------------------------------------- */
 /* ----- Basic Setup ----- */
 /* --------------------------------------- */
 
@@ -663,3 +663,75 @@ body:not(.user-is-tabbing) a:focus {
   display: block;
   border: 2px solid white;
 }
+
+
+/* ---------- ART WORK PAGE ---------- */
+
+.header-art {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./images/art-bg.jpg'); /* change to your background */
+  background-size: cover;
+  background-position: center;
+}
+
+.center-title {
+  text-align: center;
+}
+
+.center-title h1 {
+  font-size: 6rem;
+  color: white;
+}
+
+/* Gallery Grid Layout */
+.art-gallery {
+  padding: 5rem 2rem;
+  background-color: #111; /* slightly darker backdrop */
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Image Sizing */
+.gallery-item.large img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid white;
+  display: block;
+}
+
+.gallery-item.small img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid white;
+  display: block;
+}
+
+/* Slight hover effect */
+.gallery-item img:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .center-title h1 {
+    font-size: 3.5rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
