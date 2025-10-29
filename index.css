@@ -612,7 +612,7 @@ body:not(.user-is-tabbing) a:focus {
     } 
 
  /* --------------------------------------- */
-/* ----- art and set pages ----- */
+/* ----- Art & Set Pages ----- */
 /* --------------------------------------- */
 
 /* ---------- Fullscreen Headers ---------- */
@@ -623,33 +623,32 @@ body:not(.user-is-tabbing) a:focus {
   background-size: cover;
   background-position: center;
   color: white;
+  padding: 2rem 4rem;
+  box-sizing: border-box;
 }
 
 .header-art {
-  background-image: url('./images/art-bg.jpg'); /* Replace with your background */
+  background-image: url('./images/art-bg.jpg');
 }
 
 .header-set {
-  background-image: url('./images/set-bg.jpg'); /* Replace with your background */
+  background-image: url('./images/set-bg.jpg');
 }
 
 /* ---------- Navigation ---------- */
-.header-art .nav,
-.header-set .nav {
+.nav {
   display: flex;
-  justify-content: center;
-  padding: 2rem 0;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header-art .nav__items,
-.header-set .nav__items {
+.nav__items {
   list-style: none;
   display: flex;
   gap: 2rem;
 }
 
-.header-art .nav__link,
-.header-set .nav__link {
+.nav__link {
   color: white;
   text-decoration: none;
   font-size: 1.1rem;
@@ -657,19 +656,18 @@ body:not(.user-is-tabbing) a:focus {
   transition: color 0.3s ease;
 }
 
-.header-art .nav__link:hover,
-.header-set .nav__link:hover {
+.nav__link:hover {
   color: #ff6b6b;
 }
 
 /* ---------- Page Title ---------- */
 .center-title {
   text-align: center;
-  margin-top: 10vh; /* moves title down a bit from top */
+  margin-top: 30vh;
 }
 
 .center-title h1 {
-  font-size: 6rem;
+  font-size: 5rem;
   color: white;
   letter-spacing: 2px;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -678,16 +676,16 @@ body:not(.user-is-tabbing) a:focus {
 /* ---------- Gallery Section ---------- */
 .art-gallery,
 .set-gallery {
-  padding: 5rem 2rem;
+  padding: 6rem 3rem;
   background-color: #111;
 }
 
 /* Grid layout for images */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2.5rem;
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -700,7 +698,7 @@ body:not(.user-is-tabbing) a:focus {
 
 /* Large and small image sizes */
 .gallery-item.large img {
-  width: 85%;
+  width: 80%;
   height: auto;
   border-radius: 10px;
   border: 2px solid #fff;
@@ -709,7 +707,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .gallery-item.small img {
-  width: 100%;
+  width: 90%;
   height: auto;
   border-radius: 10px;
   border: 2px solid #fff;
@@ -723,10 +721,19 @@ body:not(.user-is-tabbing) a:focus {
   transition: transform 0.4s ease;
 }
 
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
 /* ---------- Responsive Tweaks ---------- */
 @media (max-width: 1024px) {
   .center-title h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .gallery-item.large img {
