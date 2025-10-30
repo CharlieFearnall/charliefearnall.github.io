@@ -612,136 +612,157 @@ body:not(.user-is-tabbing) a:focus {
     } 
 
 /* --------------------------------------- */
-/* ----- Art & Set Pages ----- */
+/* ----- Art & Set Pages CSS ----- */
 /* --------------------------------------- */
 
-/* ---------- Fullscreen Headers ---------- */
+/* ---------- Fullscreen Header ---------- */
 .header-art,
 .header-set {
   position: relative;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-size: cover;
   background-position: center;
-  color: white;
-  padding: 2rem 4rem;
-  box-sizing: border-box;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 0 4rem; /* horizontal padding for desktop */
 }
 
+/* Background images */
 .header-art {
-  background-image: url('./images/art-bg.jpg');
+  background-image: url('./images/art-bg.jpg'); /* Replace with your background */
 }
 
 .header-set {
-  background-image: url('./images/set-bg.jpg');
+  background-image: url('./images/set-bg.jpg'); /* Replace with your background */
 }
 
-/* ---------- Navigation ---------- */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav__items {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav__link {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-}
-
-.nav__link:hover {
-  color: #ff6b6b;
-}
-
-/* ---------- Page Title ---------- */
+/* ---------- Centered Title ---------- */
 .center-title {
+  position: absolute;
+  top: 50%;  /* vertically center */
+  left: 50%; /* horizontally center */
+  transform: translate(-50%, -50%);
   text-align: center;
-  margin-top: 30vh;
+  width: 100%;
+  pointer-events: none;
 }
 
 .center-title h1 {
-  font-size: 5rem;
+  font-size: 6rem;
   color: white;
   letter-spacing: 2px;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .center-title h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .center-title h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* ---------- Page Navigation / Back Links ---------- */
+.page-nav {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  display: flex;
+  gap: 1.5rem;
+  z-index: 10;
+}
+
+.page-nav a {
+  color: white;
+  font-size: 1.4rem;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.page-nav a:hover {
+  border-color: white;
+}
+
+@media (max-width: 1024px) {
+  .page-nav {
+    right: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-nav {
+    right: 1.5rem;
+    top: 1.5rem;
+  }
 }
 
 /* ---------- Gallery Section ---------- */
 .art-gallery,
 .set-gallery {
-  padding: 6rem 3rem;
+  padding: 6rem 5rem;
   background-color: #111;
 }
 
-/* Grid layout for images */
+/* Grid for images */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2.5rem;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
-/* Image container */
+/* Individual gallery items */
 .gallery-item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Large and small image sizes */
 .gallery-item.large img {
-  width: 80%;
+  width: 85%; /* smaller than full screen */
   height: auto;
   border-radius: 10px;
   border: 2px solid #fff;
-  display: block;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .gallery-item.small img {
-  width: 90%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
   border: 2px solid #fff;
-  display: block;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
-/* Hover motion */
+/* Hover effect */
 .gallery-item img:hover {
   transform: scale(1.03);
   transition: transform 0.4s ease;
 }
 
-/* ---------- Footer ---------- */
-.footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: #000;
-  color: #fff;
-  font-size: 0.9rem;
-}
-
-/* ---------- Responsive Tweaks ---------- */
+/* Responsive tweaks */
 @media (max-width: 1024px) {
-  .center-title h1 {
-    font-size: 3.5rem;
-  }
-
-  .gallery-item.large img {
-    width: 90%;
+  .header-art,
+  .header-set {
+    padding: 0 2rem;
   }
 }
 
 @media (max-width: 768px) {
+  .art-gallery,
+  .set-gallery {
+    padding: 4rem 2rem;
+  }
+
   .gallery-grid {
     grid-template-columns: 1fr;
   }
@@ -750,3 +771,4 @@ body:not(.user-is-tabbing) a:focus {
     width: 95%;
   }
 }
+
