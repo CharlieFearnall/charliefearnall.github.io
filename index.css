@@ -408,7 +408,7 @@ body:not(.user-is-tabbing) a:focus {
         url('./images/header.png');
     height: 100vh;
     background-size: cover;
-    background-position: center;
+    background-position: center -40px;
     background-attachment: fixed;
     font-size: var(--font-size-normal);
 }
